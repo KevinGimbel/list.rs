@@ -13,15 +13,15 @@ Why not? I haven't tried Rust yet so I thought this was a good idea.
 
 ## Known Issues
 
-[] The indention logic is still wrong
-[] All values are written in quotes and I don't know how to get rid of them
+- [ ] The indention logic is still wrong
+- [ ] All values are written in quotes and I don't know how to get rid of them
 
 ## Roadmap
 
 ### v0.0.2
-- [] Add limit
-- [] Add limit from environment variable
+- [ ] Add limit
+- [ ] Add limit from environment variable
 
 ## v0.0.3
-- [] Implement colors (optional, CLI flag)
-- [] Implement different modes (CLI flags)
+- [ ] Implement colors (optional, CLI flag)
+- [ ] Implement different modes (CLI flags)
