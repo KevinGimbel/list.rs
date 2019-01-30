@@ -102,8 +102,27 @@ fn list_files_and_dirs(dir: &Path) -> io::Result<()> {
     Ok(())
 }
 
+
+/// list_files_and_dirs
+/// List all files and folders in current directory
+fn list_files_and_dirs_silent(dir: &Path) -> io::Result<()> {
+    if dir.is_dir() {
+        for entry in fs::read_dir(dir)? {
+            let entry = entry?;
+            print!("{}\t", entry
+                            .path()
+                            .file_name()
+                            .unwrap()
+                            .to_string_lossy()
+                            .into_owned()
+                    );
+        }
+    }
+    Ok(())
+}
+
 fn print_usage(program: &str, opts: Options) {
-    let brief = format!("Usage: {} [options] [dir]", program);
+    let brief = format!("Usage: {} [options]", program);
     print!("{}", opts.usage(&brief));
 }
 
@@ -113,6 +132,7 @@ fn main() {
 
     let mut opts = Options::new();
     opts.optflag("h", "help", "print this help menu");
+    opts.optflag("s", "simple", "only show file names");
     let matches = match opts.parse(&args[1..]) {
         Ok(m) => m,
         Err(f) => panic!(f.to_string()),
@@ -122,5 +142,9 @@ fn main() {
         return;
     }
 
-    let _r = list_files_and_dirs(&Path::new("."));
+    if matches.opt_present("s") {
+        let _r = list_files_and_dirs_silent(&Path::new("."));
+    } else {
+        let _r = list_files_and_dirs(&Path::new("."));
+    }
 }

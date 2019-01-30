@@ -14,12 +14,11 @@ Why not? I haven't tried Rust yet so I thought this was a good idea.
 ## Known Issues
 
 - [ ] The indention logic is still wrong
-- [ ] All values are written in quotes and I don't know how to get rid of them
 
 ## Roadmap
 
 ### v0.0.2
-- [ ] default to "ls" mode (output similar to `ls -l`)
+- [x] default to "ls" mode (output similar to `ls -l`)
 - [ ] Add depth limit
 - [ ] Add limit from environment variable
 
