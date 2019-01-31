@@ -2,17 +2,15 @@
 > List files and directories
 
 ## HEY, LISTEN 🧚‍
-This is my first ever thing in Rust and it is not optimized or tested or whatever. It's probably a very bad idea to run this script from the `/` directory since it doesn't stop - it just prints all directories and files.
+This is my first ever thing in Rust and it is not optimized or tested or whatever beyond running the script with `cargo run`.
 
 ## Goal
-
 The Goal is to have a tool similar to `ls` and `tree` - basically a mix of both.
 
 ## Why Rust? 
 Why not? I haven't tried Rust yet so I thought this was a good idea.
 
 ## Known Issues
-
 - [ ] The indention logic is still wrong
 
 ## Roadmap
